@@ -1,3 +1,4 @@
+```css
 :root {
     --navy: #003366;
     --blue: #1E3A8A;
@@ -374,7 +375,7 @@ a {
 .image-wrapper {
     position: relative;
 
-    width: min(100%, 500px);
+    width: min(100%, 440px);
 
     padding: 18px;
 }
@@ -1713,3 +1714,4 @@ a {
     }
 
 }
+```
