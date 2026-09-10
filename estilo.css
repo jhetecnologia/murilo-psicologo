@@ -1,810 +1,1598 @@
-```html
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
+```css
+/* =========================================================
+   MURILO OLIVEIRA | PSICÓLOGO
+   ESTILO PRINCIPAL
+   ========================================================= */
+
+
+/* =========================
+   VARIÁVEIS
+   ========================= */
+
+:root {
+    --navy: #003366;
+    --blue: #1E3A8A;
+    --moss: #556B2F;
+    --purple: #5B2A6F;
+    --red: #A32A2A;
+    --orange: #FFA500;
+    --peach: #FFDAB9;
+    --sand: #EBCDA4;
+    --olive: #808000;
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    --white: #FFFFFF;
+    --off-white: #FAF9F6;
+    --light: #F5F3EF;
+    --gray: #6B7280;
+    --dark: #17202A;
 
-    <title>Murilo Oliveira | Psicólogo</title>
+    --border: rgba(0, 51, 102, 0.12);
 
-    <meta
-        name="description"
-        content="Murilo Oliveira, psicólogo com atuação em Terapia Cognitivo-Comportamental (TCC). Psicoterapia online para adultos e adolescentes."
-    >
+    --container: 1180px;
 
-    <meta name="theme-color" content="#003366">
+    --shadow-soft:
+        0 14px 40px rgba(0, 51, 102, 0.08);
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    --radius: 18px;
+}
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
-        rel="stylesheet"
-    >
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="estilo.css">
-</head>
+/* =========================
+   RESET
+   ========================= */
 
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+html {
+    scroll-behavior: smooth;
+}
 
-    <header class="header">
+body {
+    font-family: "Lato", sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
 
-        <div class="container header-content">
+img {
+    display: block;
+    max-width: 100%;
+}
 
-            <a href="#inicio" class="logo">
-                <span>Murilo</span>
-                <small>Psicólogo</small>
-            </a>
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-            <nav class="nav">
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
 
-                <a href="#sobre">Sobre</a>
 
-                <a href="#terapia">Terapia</a>
+/* =========================
+   CONTAINER
+   ========================= */
 
-                <a href="#atuacao">Atuação</a>
+.container {
+    width: min(
+        calc(100% - 48px),
+        var(--container)
+    );
 
-                <a href="#contato">Contato</a>
+    margin: 0 auto;
+}
 
-                <a
-                    href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
-                    class="nav-cta"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Agendar conversa
-                </a>
 
-            </nav>
+/* =========================
+   HEADER
+   ========================= */
 
-        </div>
+.header {
+    position: relative;
+    z-index: 100;
 
-    </header>
+    background: rgba(255, 255, 255, 0.96);
 
+    border-bottom: 1px solid var(--border);
+}
 
-    <main>
+.header-content {
+    min-height: 82px;
 
-        <!-- =========================
-             HERO
-        ========================== -->
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-        <section class="hero" id="inicio">
+    gap: 30px;
+}
 
-            <div class="container hero-grid">
 
-                <div class="hero-content">
+/* LOGO */
 
-                    <span class="eyebrow">
-                        Psicólogo • CRP 06/236859
-                    </span>
+.logo {
+    display: inline-flex;
+    flex-direction: column;
 
-                    <h1>
-                        Olá, eu sou Murilo.
-                    </h1>
+    line-height: 1;
 
-                    <p class="hero-subtitle">
-                        Psicólogo com atuação em Terapia Cognitivo-Comportamental (TCC).
-                    </p>
+    color: var(--navy);
+}
 
-                    <p class="hero-text">
-                        Cuidar da saúde mental também significa olhar para a vida
-                        que existe ao redor de cada pessoa.
-                    </p>
+.logo span {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
 
-                    <div class="hero-actions">
+.logo small {
+    margin-top: 5px;
 
-                        <a
-                            href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
-                            class="btn btn-primary"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            Agendar conversa
-                        </a>
+    font-size: 11px;
+    font-weight: 700;
 
-                        <a
-                            href="#sobre"
-                            class="btn btn-secondary"
-                        >
-                            Conhecer meu trabalho
-                        </a>
+    letter-spacing: 2px;
+    text-transform: uppercase;
 
-                    </div>
+    color: var(--moss);
+}
 
-                    <div class="hero-info">
 
-                        <div>
-                            <strong>Psicoterapia</strong>
-                            <span>Atendimento individual</span>
-                        </div>
+/* NAV */
 
-                        <div>
-                            <strong>Online</strong>
-                            <span>Para adultos e adolescentes</span>
-                        </div>
+.nav {
+    display: flex;
+    align-items: center;
 
-                    </div>
+    gap: 30px;
+}
 
-                </div>
+.nav > a:not(.nav-cta) {
+    position: relative;
 
+    font-size: 14px;
+    font-weight: 700;
 
-                <div class="hero-image">
+    color: var(--navy);
 
-                    <div class="image-wrapper">
+    transition:
+        color 0.25s ease;
+}
 
-                        <img
-                            src="murilo-psicologo.jpeg"
-                            alt="Murilo Oliveira, psicólogo"
-                        >
+.nav > a:not(.nav-cta)::after {
+    content: "";
 
-                        <div class="image-badge">
+    position: absolute;
+    left: 0;
+    bottom: -7px;
 
-                            <strong>TCC</strong>
+    width: 0;
+    height: 2px;
 
-                            <span>Abordagem clínica</span>
+    background: var(--orange);
 
-                        </div>
+    transition: width 0.25s ease;
+}
 
-                    </div>
+.nav > a:not(.nav-cta):hover {
+    color: var(--purple);
+}
 
-                </div>
+.nav > a:not(.nav-cta):hover::after {
+    width: 100%;
+}
 
-            </div>
 
-        </section>
+/* HEADER CTA */
 
+.nav-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-        <!-- =========================
-             FRASE
-        ========================== -->
+    min-height: 44px;
+    padding: 0 20px;
 
-        <section class="quote-section">
+    border-radius: 999px;
 
-            <div class="container">
+    background: var(--navy);
+    color: var(--white);
 
-                <blockquote>
-                    “A terapia é um processo construído em conjunto.”
-                </blockquote>
+    font-size: 13px;
+    font-weight: 700;
 
-            </div>
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
 
-        </section>
+.nav-cta:hover {
+    transform: translateY(-2px);
 
+    background: var(--blue);
 
-        <!-- =========================
-             SOBRE
-        ========================== -->
+    box-shadow:
+        0 8px 20px rgba(0, 51, 102, 0.16);
+}
 
-        <section class="section about-section" id="sobre">
 
-            <div class="container">
+/* =========================
+   HERO
+   ========================= */
 
-                <div class="section-heading">
+.hero {
+    position: relative;
 
-                    <span class="section-label">
-                        SOBRE MIM
-                    </span>
+    overflow: hidden;
 
-                    <h2>
-                        Um espaço para compreender
-                        o que está acontecendo.
-                    </h2>
+    background:
+        linear-gradient(
+            135deg,
+            #FAF9F6 0%,
+            #FFFFFF 55%,
+            #F4F0F7 100%
+        );
 
-                </div>
+    padding: 92px 0 100px;
+}
 
+.hero::before {
+    content: "";
 
-                <div class="about-content">
+    position: absolute;
 
-                    <div class="about-intro">
+    width: 430px;
+    height: 430px;
 
-                        <p>
-                            Sou psicólogo e acredito que cuidar da saúde mental
-                            também significa olhar para a vida que existe ao redor
-                            de cada pessoa.
-                        </p>
+    right: -180px;
+    top: -180px;
 
-                        <p>
-                            Minha atuação é orientada pela Terapia
-                            Cognitivo-Comportamental (TCC) e por uma perspectiva
-                            biopsicossocial, considerando a relação entre
-                            pensamentos, emoções, comportamentos, corpo,
-                            história de vida, relações e contexto social.
-                        </p>
+    border-radius: 50%;
 
-                    </div>
+    background: rgba(235, 205, 164, 0.25);
+}
 
+.hero::after {
+    content: "";
 
-                    <div class="about-text">
+    position: absolute;
 
-                        <p>
-                            Afinal, aquilo que sentimos e fazemos não acontece
-                            no vazio. Nossas experiências são atravessadas pelos
-                            vínculos que construímos, pelo ambiente em que vivemos,
-                            pelas oportunidades que tivemos e pelas formas como
-                            aprendemos a lidar com o mundo.
-                        </p>
+    width: 260px;
+    height: 260px;
 
-                        <p>
-                            Ao longo da minha formação e experiência profissional,
-                            tive contato com diferentes públicos e contextos,
-                            incluindo adolescentes e adultos, mulheres migrantes
-                            e refugiadas, pessoas LGBTQIAPN+, pessoas em situação
-                            de vulnerabilidade social e pessoas atravessadas por
-                            questões relacionadas a gênero, sexualidade,
-                            relacionamentos, família, trabalho e pertencimento.
-                        </p>
+    left: -150px;
+    bottom: -150px;
 
-                        <p>
-                            Essas experiências ampliaram meu olhar para as
-                            diferentes formas que uma mesma dificuldade pode
-                            assumir dependendo da história e do contexto de
-                            cada pessoa.
-                        </p>
+    border-radius: 50%;
 
-                    </div>
+    background: rgba(85, 107, 47, 0.08);
+}
 
-                </div>
+.hero-grid {
+    position: relative;
+    z-index: 1;
 
-            </div>
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
 
-        </section>
+    align-items: center;
 
+    gap: 80px;
+}
 
-        <!-- =========================
-             TERAPIA
-        ========================== -->
 
-        <section class="section therapy-section" id="terapia">
+/* HERO CONTENT */
 
-            <div class="container">
+.hero-content {
+    max-width: 640px;
+}
 
-                <div class="section-heading centered">
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
 
-                    <span class="section-label">
-                        COMO TRABALHAMOS
-                    </span>
+    margin-bottom: 22px;
 
-                    <h2>
-                        Terapia como um processo
-                        construído em conjunto.
-                    </h2>
+    color: var(--moss);
 
-                    <p>
-                        Você não precisa chegar sabendo exatamente o que está
-                        acontecendo. Parte do nosso trabalho é justamente
-                        compreender o problema e identificar caminhos possíveis.
-                    </p>
+    font-size: 13px;
+    font-weight: 900;
 
-                </div>
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
 
+.eyebrow::before {
+    content: "";
 
-                <div class="cards-grid">
+    width: 28px;
+    height: 2px;
 
-                    <article class="card">
+    margin-right: 10px;
 
-                        <span class="card-number">
-                            01
-                        </span>
+    background: var(--orange);
+}
 
-                        <h3>
-                            Compreender
-                        </h3>
+.hero h1 {
+    max-width: 700px;
 
-                        <p>
-                            Observar o que está acontecendo, compreender
-                            pensamentos, emoções e comportamentos e identificar
-                            padrões que podem estar mantendo determinadas
-                            dificuldades.
-                        </p>
+    margin-bottom: 20px;
 
-                    </article>
+    color: var(--navy);
 
+    font-size: clamp(46px, 6vw, 76px);
+    line-height: 1.02;
 
-                    <article class="card">
+    font-weight: 900;
 
-                        <span class="card-number">
-                            02
-                        </span>
+    letter-spacing: -2.5px;
+}
 
-                        <h3>
-                            Construir
-                        </h3>
+.hero-subtitle {
+    max-width: 620px;
 
-                        <p>
-                            Desenvolver novas formas de compreender as situações,
-                            ampliar habilidades e construir estratégias que façam
-                            sentido para a sua realidade.
-                        </p>
+    margin-bottom: 20px;
 
-                    </article>
+    color: var(--purple);
 
+    font-size: 21px;
+    line-height: 1.5;
 
-                    <article class="card">
+    font-weight: 700;
+}
 
-                        <span class="card-number">
-                            03
-                        </span>
+.hero-text {
+    max-width: 600px;
 
-                        <h3>
-                            Experimentar
-                        </h3>
+    color: #4B5563;
 
-                        <p>
-                            Experimentar formas diferentes de responder às
-                            situações e levar para a vida cotidiana aquilo que
-                            foi construído durante o processo.
-                        </p>
+    font-size: 18px;
+    line-height: 1.75;
+}
 
-                    </article>
 
-                </div>
+/* HERO BUTTONS */
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
 
-                <div class="therapy-note">
+    gap: 14px;
 
-                    <strong>
-                        Terapia Cognitivo-Comportamental
-                    </strong>
+    margin-top: 34px;
+}
 
-                    <p>
-                        Na TCC, trabalhamos de maneira colaborativa e ativa.
-                        A terapia pode envolver perguntas, reflexões,
-                        psicoeducação e, quando fizer sentido, propostas
-                        práticas para o cotidiano.
-                    </p>
+.btn {
+    min-height: 50px;
 
-                </div>
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-            </div>
+    padding: 0 25px;
 
-        </section>
+    border-radius: 999px;
 
+    font-size: 14px;
+    font-weight: 900;
 
-        <!-- =========================
-             PERSPECTIVA
-        ========================== -->
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease,
+        color 0.25s ease;
+}
 
-        <section class="section perspective-section" id="perspectiva">
+.btn:hover {
+    transform: translateY(-2px);
+}
 
-            <div class="container">
+.btn-primary {
+    background: var(--navy);
+    color: var(--white);
 
-                <div class="section-heading">
+    box-shadow:
+        0 8px 22px rgba(0, 51, 102, 0.16);
+}
 
-                    <span class="section-label">
-                        PERSPECTIVA
-                    </span>
+.btn-primary:hover {
+    background: var(--blue);
 
-                    <h2>
-                        Um olhar para a pessoa inteira.
-                    </h2>
+    box-shadow:
+        0 11px 26px rgba(0, 51, 102, 0.22);
+}
 
-                    <p>
-                        Saúde mental também envolve contexto. Por isso,
-                        considero diferentes aspectos que participam da
-                        experiência de cada pessoa.
-                    </p>
+.btn-secondary {
+    border: 1px solid rgba(0, 51, 102, 0.22);
 
-                </div>
+    background: rgba(255, 255, 255, 0.7);
 
+    color: var(--navy);
+}
 
-                <div class="perspective-grid">
+.btn-secondary:hover {
+    border-color: var(--purple);
 
-                    <div class="perspective-item">
-                        <h3>Pensamentos</h3>
-                        <p>Como interpretamos as situações e damos significado às experiências.</p>
-                    </div>
+    color: var(--purple);
+}
 
-                    <div class="perspective-item">
-                        <h3>Emoções</h3>
-                        <p>O que sentimos e como aprendemos a lidar com essas experiências.</p>
-                    </div>
 
-                    <div class="perspective-item">
-                        <h3>Comportamentos</h3>
-                        <p>As formas como respondemos às situações e aos desafios cotidianos.</p>
-                    </div>
+/* HERO INFO */
 
-                    <div class="perspective-item">
-                        <h3>Relações</h3>
-                        <p>Os vínculos, relações e formas de comunicação que fazem parte da nossa vida.</p>
-                    </div>
+.hero-info {
+    display: flex;
+    flex-wrap: wrap;
 
-                    <div class="perspective-item">
-                        <h3>História de vida</h3>
-                        <p>Experiências passadas e aprendizados que ajudam a compreender o presente.</p>
-                    </div>
+    gap: 36px;
 
-                    <div class="perspective-item">
-                        <h3>Contexto social</h3>
-                        <p>Ambiente, cultura, trabalho, condições de vida, identidade e pertencimento.</p>
-                    </div>
+    margin-top: 42px;
+}
 
-                </div>
+.hero-info > div {
+    display: flex;
+    flex-direction: column;
 
-            </div>
+    gap: 3px;
+}
 
-        </section>
+.hero-info strong {
+    color: var(--navy);
 
+    font-size: 14px;
+    font-weight: 900;
+}
 
-        <!-- =========================
-             ATUAÇÃO
-        ========================== -->
+.hero-info span {
+    color: var(--gray);
 
-        <section class="section areas-section" id="atuacao">
+    font-size: 13px;
+}
 
-            <div class="container">
 
-                <div class="section-heading centered">
+/* HERO IMAGE */
 
-                    <span class="section-label">
-                        ÁREAS DE INTERESSE
-                    </span>
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
 
-                    <h2>
-                        Algumas questões que podemos
-                        explorar juntos.
-                    </h2>
+.image-wrapper {
+    position: relative;
 
-                </div>
+    width: min(100%, 470px);
+}
 
+.image-wrapper::before {
+    content: "";
 
-                <div class="areas-grid">
+    position: absolute;
 
-                    <div class="area-item">
-                        <span>01</span>
-                        <h3>Relacionamentos</h3>
-                    </div>
+    width: 100%;
+    height: 100%;
 
-                    <div class="area-item">
-                        <span>02</span>
-                        <h3>Ansiedade</h3>
-                    </div>
+    top: 22px;
+    left: 22px;
 
-                    <div class="area-item">
-                        <span>03</span>
-                        <h3>Autoestima</h3>
-                    </div>
+    border-radius: 34px;
 
-                    <div class="area-item">
-                        <span>04</span>
-                        <h3>Comunicação e limites</h3>
-                    </div>
+    background: var(--sand);
 
-                    <div class="area-item">
-                        <span>05</span>
-                        <h3>Identidade e sexualidade</h3>
-                    </div>
+    opacity: 0.55;
 
-                    <div class="area-item">
-                        <span>06</span>
-                        <h3>Gênero e masculinidades</h3>
-                    </div>
+    z-index: 0;
+}
 
-                    <div class="area-item">
-                        <span>07</span>
-                        <h3>Mudanças de vida</h3>
-                    </div>
+.image-wrapper img {
+    position: relative;
+    z-index: 1;
 
-                    <div class="area-item">
-                        <span>08</span>
-                        <h3>Tomada de decisões</h3>
-                    </div>
+    width: 100%;
+    aspect-ratio: 4 / 5;
 
-                    <div class="area-item">
-                        <span>09</span>
-                        <h3>Padrões de comportamento</h3>
-                    </div>
+    object-fit: cover;
 
-                </div>
+    border-radius: 34px;
 
-            </div>
+    box-shadow:
+        0 24px 60px rgba(0, 51, 102, 0.16);
+}
 
-        </section>
 
+/* IMAGE BADGE */
 
-        <!-- =========================
-             EXPERIÊNCIA
-        ========================== -->
+.image-badge {
+    position: absolute;
 
-        <section class="section experience-section">
+    z-index: 2;
 
-            <div class="container experience-grid">
+    left: -22px;
+    bottom: 28px;
 
-                <div class="section-heading">
+    display: flex;
+    flex-direction: column;
 
-                    <span class="section-label">
-                        EXPERIÊNCIA
-                    </span>
+    min-width: 170px;
 
-                    <h2>
-                        Diferentes histórias,
-                        diferentes contextos.
-                    </h2>
+    padding: 16px 20px;
 
-                </div>
+    border-radius: 14px;
 
+    background: var(--white);
 
-                <div class="experience-content">
+    box-shadow:
+        0 12px 30px rgba(0, 51, 102, 0.14);
+}
 
-                    <p>
-                        Ao longo da minha formação e experiência profissional,
-                        tive contato com diferentes públicos e contextos.
-                    </p>
+.image-badge strong {
+    color: var(--purple);
 
-                    <p>
-                        Essa experiência contribuiu para uma compreensão mais
-                        ampla sobre como questões emocionais e comportamentais
-                        podem se apresentar de maneiras diferentes dependendo
-                        da história, das relações e do contexto de cada pessoa.
-                    </p>
+    font-size: 17px;
+    font-weight: 900;
+}
 
-                    <p>
-                        Minha escuta busca considerar essas diferenças sem
-                        reduzir a pessoa a um diagnóstico, comportamento ou
-                        característica isolada.
-                    </p>
+.image-badge span {
+    margin-top: 2px;
 
-                </div>
+    color: var(--gray);
 
-            </div>
+    font-size: 12px;
+}
 
-        </section>
 
+/* =========================
+   QUOTE
+   ========================= */
 
-        <!-- =========================
-             PROCESSO
-        ========================== -->
+.quote-section {
+    padding: 76px 0;
 
-        <section class="section process-section">
+    background: var(--navy);
 
-            <div class="container">
+    color: var(--white);
 
-                <div class="section-heading centered">
+    text-align: center;
+}
 
-                    <span class="section-label">
-                        O PROCESSO
-                    </span>
+.quote-section blockquote {
+    max-width: 850px;
 
-                    <h2>
-                        Clareza, diálogo e participação ativa.
-                    </h2>
+    margin: 0 auto;
 
-                    <p>
-                        A terapia é construída em conjunto, respeitando o
-                        momento, as necessidades e a realidade de cada pessoa.
-                    </p>
+    font-size: clamp(25px, 3.2vw, 39px);
+    line-height: 1.35;
 
-                </div>
+    font-weight: 300;
 
+    letter-spacing: -0.5px;
+}
 
-                <div class="process-grid">
+.quote-section blockquote::before {
+    content: "“";
 
-                    <div class="process-item">
+    display: block;
 
-                        <span class="process-number">
-                            01
-                        </span>
+    height: 30px;
 
-                        <h3>
-                            Acolhimento e escuta
-                        </h3>
+    color: var(--orange);
 
-                        <p>
-                            Um espaço para falar sobre o que está acontecendo
-                            sem a necessidade de chegar com respostas prontas.
-                        </p>
+    font-size: 60px;
+    line-height: 0.8;
 
-                    </div>
+    font-weight: 900;
+}
 
 
-                    <div class="process-item">
+/* =========================
+   SEÇÕES
+   ========================= */
 
-                        <span class="process-number">
-                            02
-                        </span>
+.section {
+    padding: 105px 0;
+}
 
-                        <h3>
-                            Compreensão
-                        </h3>
+.section-heading {
+    max-width: 700px;
 
-                        <p>
-                            Juntos, buscamos compreender dificuldades, padrões
-                            e situações que fazem parte da sua experiência.
-                        </p>
+    margin-bottom: 58px;
+}
 
-                    </div>
+.section-heading.centered {
+    max-width: 760px;
 
+    margin-left: auto;
+    margin-right: auto;
 
-                    <div class="process-item">
+    text-align: center;
+}
 
-                        <span class="process-number">
-                            03
-                        </span>
+.section-label {
+    display: inline-block;
 
-                        <h3>
-                            Novos caminhos
-                        </h3>
+    margin-bottom: 17px;
 
-                        <p>
-                            A partir dessa compreensão, construímos estratégias
-                            e possibilidades que façam sentido para a sua vida.
-                        </p>
+    color: var(--moss);
 
-                    </div>
+    font-size: 12px;
+    font-weight: 900;
 
-                </div>
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
 
-            </div>
+.section-heading h2 {
+    color: var(--navy);
 
-        </section>
+    font-size: clamp(34px, 4vw, 53px);
+    line-height: 1.12;
 
+    font-weight: 900;
 
-        <!-- =========================
-             CTA FINAL
-        ========================== -->
+    letter-spacing: -1.3px;
+}
 
-        <section class="cta-section" id="contato">
+.section-heading p {
+    margin-top: 20px;
 
-            <div class="container cta-content">
+    color: var(--gray);
 
-                <span class="section-label">
-                    VAMOS CONVERSAR
-                </span>
+    font-size: 17px;
+}
 
-                <h2>
-                    Talvez este seja um bom momento
-                    para começar.
-                </h2>
 
-                <p>
-                    Se você sente que está vivendo alguma situação que gostaria
-                    de compreender melhor, pode ser um bom momento para iniciar
-                    esse processo.
-                </p>
+/* =========================
+   SOBRE
+   ========================= */
 
-                <a
-                    href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
-                    class="btn btn-light"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Falar com Murilo
-                </a>
+.about-section {
+    background: var(--white);
+}
 
-            </div>
+.about-content {
+    display: grid;
 
-        </section>
+    grid-template-columns:
+        minmax(0, 0.85fr)
+        minmax(0, 1.15fr);
 
-    </main>
+    gap: 80px;
+}
 
+.about-intro {
+    padding-left: 24px;
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    border-left: 4px solid var(--orange);
+}
 
-    <footer class="footer">
+.about-intro p {
+    margin-bottom: 22px;
 
-        <div class="container footer-content">
+    color: var(--navy);
 
-            <div class="footer-brand">
+    font-size: 21px;
+    line-height: 1.65;
 
-                <a href="#inicio" class="logo footer-logo">
+    font-weight: 700;
+}
 
-                    <span>Murilo</span>
+.about-intro p:last-child {
+    margin-bottom: 0;
+}
 
-                    <small>Psicólogo</small>
+.about-text {
+    color: #4B5563;
 
-                </a>
+    font-size: 16px;
+}
 
-                <p>
-                    Terapia Cognitivo-Comportamental (TCC)
-                </p>
+.about-text p {
+    margin-bottom: 23px;
+}
 
-                <p>
-                    CRP 06/236859
-                </p>
+.about-text p:last-child {
+    margin-bottom: 0;
+}
 
-            </div>
 
+/* =========================
+   TERAPIA
+   ========================= */
 
-            <div class="footer-column">
+.therapy-section {
+    background: var(--light);
+}
 
-                <h3>
-                    Atendimento
-                </h3>
+.cards-grid {
+    display: grid;
 
-                <p>
-                    Psicoterapia online
-                </p>
+    grid-template-columns: repeat(3, 1fr);
 
-                <p>
-                    Para adultos e adolescentes
-                </p>
+    gap: 24px;
+}
 
-                <p>
-                    Atendimento para brasileiros
-                </p>
+.card {
+    position: relative;
 
-            </div>
+    min-height: 290px;
 
+    padding: 34px;
 
-            <div class="footer-column">
+    background: var(--white);
 
-                <h3>
-                    Contato
-                </h3>
+    border: 1px solid rgba(0, 51, 102, 0.08);
 
-                <a
-                    href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    WhatsApp
-                </a>
+    border-radius: var(--radius);
 
-                <a
-                    href="https://www.instagram.com/psicomurillo.c.oliveira/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
+    box-shadow:
+        0 8px 26px rgba(0, 51, 102, 0.04);
 
-            </div>
+    overflow: hidden;
 
-        </div>
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
 
+.card::after {
+    content: "";
 
-        <div class="container footer-bottom">
+    position: absolute;
 
-            <p>
-                © 2026 Murilo Oliveira. Todos os direitos reservados.
-            </p>
+    width: 110px;
+    height: 110px;
 
-            <p>
-                Psicólogo • CRP 06/236859
-            </p>
+    right: -45px;
+    bottom: -45px;
 
-        </div>
+    border-radius: 50%;
 
-    </footer>
+    background: var(--peach);
 
+    opacity: 0.32;
+}
 
-    <!-- =========================
-         WHATSAPP FLUTUANTE
-    ========================== -->
+.card:hover {
+    transform: translateY(-5px);
 
-    <a
-        href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
-        class="whatsapp-float"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Falar com Murilo pelo WhatsApp"
-    >
+    box-shadow:
+        0 18px 40px rgba(0, 51, 102, 0.10);
+}
 
-        <svg
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-        >
+.card-number {
+    display: block;
 
-            <path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.54.22.22 5.32.22 11.86c0 2.09.55 4.13 1.59 5.93L.12 24l6.35-1.66a11.84 11.84 0 0 0 5.61 1.42h.01c6.53 0 11.85-5.32 11.85-11.86 0-3.17-1.23-6.15-3.42-8.42ZM12.09 21.76h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.77.99 1.01-3.67-.23-.38a9.88 9.88 0 1 1 8.39 4.65Zm5.42-7.4c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.09 4.49.71.31 1.26.5 1.69.64.71.23 1.35.2 1.86.12.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35Z"/>
+    margin-bottom: 35px;
 
-        </svg>
+    color: var(--orange);
 
-    </a>
+    font-size: 13px;
+    font-weight: 900;
 
+    letter-spacing: 2px;
+}
 
-    <!-- JAVASCRIPT -->
+.card h3 {
+    margin-bottom: 13px;
 
-    <script src="script.js"></script>
+    color: var(--navy);
 
-</body>
-</html>
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.card p {
+    position: relative;
+    z-index: 1;
+
+    color: var(--gray);
+
+    font-size: 15px;
+    line-height: 1.75;
+}
+
+.therapy-note {
+    display: grid;
+
+    grid-template-columns: 0.7fr 1.3fr;
+
+    gap: 50px;
+
+    margin-top: 34px;
+    padding: 32px 36px;
+
+    border-radius: var(--radius);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(91, 42, 111, 0.08),
+            rgba(235, 205, 164, 0.20)
+        );
+}
+
+.therapy-note strong {
+    color: var(--purple);
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.therapy-note p {
+    color: #4B5563;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   PERSPECTIVA
+   ========================= */
+
+.perspective-section {
+    background: var(--white);
+}
+
+.perspective-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+
+    background: var(--border);
+}
+
+.perspective-item {
+    min-height: 210px;
+
+    padding: 32px;
+
+    background: var(--white);
+
+    transition:
+        background 0.25s ease;
+}
+
+.perspective-item:hover {
+    background: #FAF8FC;
+}
+
+.perspective-item h3 {
+    margin-bottom: 12px;
+
+    color: var(--navy);
+
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.perspective-item p {
+    color: var(--gray);
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   ÁREAS
+   ========================= */
+
+.areas-section {
+    background:
+        linear-gradient(
+            135deg,
+            #F7F4F0,
+            #F8F7FA
+        );
+}
+
+.areas-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+.area-item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 112px;
+
+    padding: 24px 26px;
+
+    border-radius: 14px;
+
+    background: var(--white);
+
+    border: 1px solid rgba(0, 51, 102, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.area-item:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(91, 42, 111, 0.22);
+
+    box-shadow:
+        0 12px 28px rgba(0, 51, 102, 0.07);
+}
+
+.area-item span {
+    position: absolute;
+
+    top: 14px;
+    right: 18px;
+
+    color: rgba(85, 107, 47, 0.38);
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1px;
+}
+
+.area-item h3 {
+    max-width: 80%;
+
+    color: var(--navy);
+
+    font-size: 17px;
+    font-weight: 900;
+    line-height: 1.35;
+}
+
+
+/* =========================
+   EXPERIÊNCIA
+   ========================= */
+
+.experience-section {
+    background: var(--white);
+}
+
+.experience-grid {
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    gap: 100px;
+
+    align-items: start;
+}
+
+.experience-content {
+    padding-top: 4px;
+}
+
+.experience-content p {
+    margin-bottom: 24px;
+
+    color: #4B5563;
+
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.experience-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   PROCESSO
+   ========================= */
+
+.process-section {
+    background: var(--light);
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 24px;
+}
+
+.process-item {
+    padding: 32px;
+
+    border-top: 3px solid var(--orange);
+
+    background: var(--white);
+
+    border-radius: 0 0 16px 16px;
+}
+
+.process-number {
+    display: block;
+
+    margin-bottom: 28px;
+
+    color: var(--moss);
+
+    font-size: 12px;
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+.process-item h3 {
+    margin-bottom: 12px;
+
+    color: var(--navy);
+
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.process-item p {
+    color: var(--gray);
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* =========================
+   CTA FINAL
+   ========================= */
+
+.cta-section {
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 105px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--purple),
+            var(--navy)
+        );
+
+    color: var(--white);
+
+    text-align: center;
+}
+
+.cta-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    top: -220px;
+    right: -100px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 165, 0, 0.13);
+}
+
+.cta-section::after {
+    content: "";
+
+    position: absolute;
+
+    width: 260px;
+    height: 260px;
+
+    left: -140px;
+    bottom: -160px;
+
+    border-radius: 50%;
+
+    background: rgba(235, 205, 164, 0.10);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 760px;
+}
+
+.cta-section .section-label {
+    color: var(--peach);
+}
+
+.cta-section h2 {
+    margin-bottom: 20px;
+
+    color: var(--white);
+
+    font-size: clamp(36px, 4.5vw, 58px);
+    line-height: 1.1;
+
+    font-weight: 900;
+
+    letter-spacing: -1.5px;
+}
+
+.cta-section p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-size: 17px;
+}
+
+.btn-light {
+    margin-top: 32px;
+
+    background: var(--white);
+
+    color: var(--navy);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.btn-light:hover {
+    background: var(--peach);
+
+    color: var(--navy);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+.footer {
+    background: #F4F3F0;
+
+    color: var(--navy);
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns: 1.4fr 1fr 0.8fr;
+
+    gap: 60px;
+
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+.footer-brand p {
+    margin-top: 12px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+.footer-logo {
+    margin-bottom: 5px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+.footer-column h3 {
+    margin-bottom: 17px;
+
+    color: var(--navy);
+
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.footer-column p,
+.footer-column a {
+    margin-bottom: 8px;
+
+    color: var(--gray);
+
+    font-size: 13px;
+}
+
+.footer-column a {
+    transition:
+        color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--purple);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 22px;
+    padding-bottom: 25px;
+
+    border-top: 1px solid rgba(0, 51, 102, 0.10);
+}
+
+.footer-bottom p {
+    color: #7A8088;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   WHATSAPP FLUTUANTE
+   ========================= */
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #4FAF7B;
+
+    z-index: 999;
+
+    box-shadow: 0 6px 18px rgba(0, 51, 102, 0.12);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.whatsapp-float svg {
+    width: 22px;
+    height: 22px;
+
+    fill: #FFFFFF;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-2px);
+
+    background: #459F70;
+
+    box-shadow: 0 9px 22px rgba(0, 51, 102, 0.16);
+}
+
+.whatsapp-float:focus-visible {
+    outline: 2px solid #FFA500;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float {
+        right: 15px;
+        bottom: 15px;
+
+        width: 44px;
+        height: 44px;
+    }
+
+    .whatsapp-float svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+   ========================= */
+
+@media (max-width: 1000px) {
+
+    .nav {
+        gap: 18px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .hero-content {
+        max-width: 760px;
+    }
+
+    .hero-image {
+        justify-content: flex-start;
+    }
+
+    .image-wrapper {
+        max-width: 460px;
+    }
+
+    .about-content,
+    .experience-grid {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .cards-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .perspective-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .therapy-note {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 760px) {
+
+    .container {
+        width: min(
+            calc(100% - 34px),
+            var(--container)
+        );
+    }
+
+    .header-content {
+        min-height: 72px;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hero {
+        padding: 68px 0 75px;
+    }
+
+    .hero h1 {
+        font-size: clamp(42px, 13vw, 62px);
+
+        letter-spacing: -1.8px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .hero-info {
+        gap: 22px;
+
+        margin-top: 32px;
+    }
+
+    .image-wrapper {
+        max-width: 100%;
+    }
+
+    .image-wrapper::before {
+        top: 14px;
+        left: 14px;
+
+        border-radius: 25px;
+    }
+
+    .image-wrapper img {
+        border-radius: 25px;
+    }
+
+    .image-badge {
+        left: 15px;
+        bottom: 18px;
+    }
+
+    .section {
+        padding: 78px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading h2 {
+        font-size: 36px;
+    }
+
+    .quote-section {
+        padding: 60px 0;
+    }
+
+    .quote-section blockquote {
+        font-size: 26px;
+    }
+
+    .about-intro {
+        padding-left: 18px;
+    }
+
+    .about-intro p {
+        font-size: 18px;
+    }
+
+    .cards-grid,
+    .perspective-grid,
+    .areas-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: auto;
+    }
+
+    .perspective-item {
+        min-height: auto;
+    }
+
+    .therapy-note {
+        padding: 26px;
+    }
+
+    .experience-grid {
+        gap: 35px;
+    }
+
+    .experience-content p {
+        font-size: 16px;
+    }
+
+    .cta-section {
+        padding: 78px 0;
+    }
+
+    .cta-section h2 {
+        font-size: 39px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 5px;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .logo span {
+        font-size: 22px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-info {
+        flex-direction: column;
+    }
+
+    .image-badge {
+        min-width: 145px;
+
+        padding: 13px 16px;
+    }
+
+    .image-badge strong {
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .card,
+    .process-item,
+    .area-item {
+        padding: 26px;
+    }
+
+    .cta-section h2 {
+        font-size: 34px;
+    }
+}
+
+
+/* =========================
+   ACESSIBILIDADE
+   ========================= */
+
+:focus-visible {
+    outline: 2px solid var(--orange);
+    outline-offset: 4px;
+}
+
+
+/* =========================
+   REDUÇÃO DE MOVIMENTO
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
 ```
