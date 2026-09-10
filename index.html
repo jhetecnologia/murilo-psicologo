@@ -6,92 +6,110 @@
 
     <title>Murilo Oliveira | Psicólogo</title>
 
-    <meta name="description" content="Murilo Oliveira, psicólogo com atuação em Terapia Cognitivo-Comportamental (TCC). Psicoterapia online para brasileiros.">
-    <meta name="author" content="Murilo Oliveira">
+    <meta
+        name="description"
+        content="Murilo Oliveira, psicólogo com atuação em Terapia Cognitivo-Comportamental (TCC). Psicoterapia online para brasileiros."
+    >
+
+    <meta name="theme-color" content="#003366">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
+    <!-- ELEMENTOS DECORATIVOS -->
+    <div class="visual-shape shape-one"></div>
+    <div class="visual-shape shape-two"></div>
 
-    <header class="header" id="header">
-        <div class="container header-container">
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
 
-            <a href="#inicio" class="logo" aria-label="Página inicial">
-                Murilo
+            <a href="#inicio" class="logo" aria-label="Murilo Oliveira - início">
+                <span class="logo-name">Murilo</span>
+                <span class="logo-subtitle">Psicólogo</span>
             </a>
 
-            <nav class="nav" id="nav">
-                <a href="#sobre">Sobre mim</a>
-                <a href="#terapia">A terapia</a>
-                <a href="#atuacao">Atuação</a>
-                <a href="#contato">Contato</a>
-            </nav>
-
-            <a 
-                href="https://wa.me/5511911927565"
-                class="header-button"
-                target="_blank"
-                rel="noopener noreferrer"
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="main-navigation"
             >
-                Agendar conversa
-            </a>
-
-            <button class="menu-button" id="menu-button" aria-label="Abrir menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
+            <nav class="nav" id="main-navigation">
+                <a href="#sobre">Sobre</a>
+                <a href="#terapia">Terapia</a>
+                <a href="#atuacao">Atuação</a>
+                <a href="#contato">Contato</a>
+
+                <a
+                    href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
+                    class="nav-cta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Agendar conversa
+                </a>
+            </nav>
+
         </div>
     </header>
 
 
-    <main>
+    <main id="inicio">
 
-        <!-- =========================
-             HERO
-        ========================== -->
-
-        <section class="hero" id="inicio">
-
-            <div class="container hero-container">
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
 
                 <div class="hero-content">
 
-                    <span class="eyebrow">
+                    <div class="eyebrow">
+                        <span class="eyebrow-dot"></span>
                         Psicólogo • CRP 06/236859
-                    </span>
+                    </div>
 
                     <h1>
-                        Olá, eu sou <strong>Murilo.</strong>
+                        Olá, eu sou
+                        <span>Murilo.</span>
                     </h1>
 
                     <p class="hero-subtitle">
-                        Psicólogo com atuação em Terapia Cognitivo-Comportamental (TCC).
+                        Psicólogo com atuação em Terapia
+                        Cognitivo-Comportamental (TCC).
                     </p>
 
                     <p class="hero-text">
-                        Cuidar da saúde mental também significa olhar para a vida que existe ao redor de cada pessoa.
+                        Cuidar da saúde mental também significa
+                        olhar para a vida que existe ao redor de
+                        cada pessoa.
                     </p>
 
-                    <div class="hero-buttons">
+                    <div class="hero-actions">
 
-                        <a 
-                            href="https://wa.me/5511911927565"
+                        <a
+                            href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
                             class="button button-primary"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
                             Agendar conversa
+                            <span class="button-arrow">↗</span>
                         </a>
 
                         <a href="#sobre" class="button button-secondary">
@@ -101,75 +119,85 @@
                     </div>
 
                     <div class="hero-info">
-                        <span>Psicoterapia</span>
-                        <span>Atendimento online</span>
-                        <span>Para brasileiros</span>
-                    </div>
 
-                </div>
-
-
-                <div class="hero-image">
-
-                    <!--
-                        FOTO DO MURILO
-                        Substituir este espaço pela foto profissional.
-                    -->
-
-                    <div class="photo-placeholder">
-
-                        <div class="photo-placeholder-icon">
-                            <span></span>
+                        <div class="hero-info-item">
+                            <span class="info-symbol">○</span>
+                            <div>
+                                <strong>Psicoterapia</strong>
+                                <small>Atendimento individual</small>
+                            </div>
                         </div>
 
-                        <p>Foto profissional</p>
+                        <div class="hero-info-item">
+                            <span class="info-symbol">⌁</span>
+                            <div>
+                                <strong>Online</strong>
+                                <small>Para brasileiros</small>
+                            </div>
+                        </div>
 
                     </div>
 
                 </div>
 
-            </div>
 
-        </section>
+                <!-- FOTO -->
+                <div class="hero-visual">
 
+                    <div class="photo-decoration photo-decoration-one"></div>
+                    <div class="photo-decoration photo-decoration-two"></div>
 
-        <!-- =========================
-             FRASE DE DESTAQUE
-        ========================== -->
+                    <div class="photo-frame">
 
-        <section class="quote-section">
+                        <div class="photo-accent"></div>
 
-            <div class="container">
+                        <img
+                            src="murilo-psicologo.jpeg"
+                            alt="Murilo Oliveira, psicólogo"
+                        >
 
-                <div class="quote-content">
+                    </div>
 
-                    <span class="section-label">
-                        Um espaço para você
-                    </span>
+                    <div class="photo-badge">
+                        <span class="badge-icon">+</span>
 
-                    <blockquote>
-                        “A terapia é um processo construído em conjunto.”
-                    </blockquote>
-
-                    <p>
-                        Você não precisa chegar sabendo exatamente o que está acontecendo,
-                        nem ter uma explicação pronta para aquilo que está sentindo.
-                    </p>
+                        <div>
+                            <strong>TCC</strong>
+                            <small>Abordagem clínica</small>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
-
         </section>
 
 
-        <!-- =========================
-             SOBRE
-        ========================== -->
+        <!-- FRASE -->
+        <section class="quote-section">
+            <div class="container">
 
+                <div class="quote-box">
+
+                    <span class="quote-mark">“</span>
+
+                    <p>
+                        A terapia é um processo
+                        construído em conjunto.
+                    </p>
+
+                    <span class="quote-line"></span>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SOBRE -->
         <section class="section about-section" id="sobre">
 
-            <div class="container about-grid">
+            <div class="container">
 
                 <div class="section-heading">
 
@@ -178,46 +206,64 @@
                     </span>
 
                     <h2>
-                        Um olhar para a pessoa por inteiro.
+                        Um espaço para compreender
+                        <span>o que está acontecendo.</span>
                     </h2>
 
                 </div>
 
 
-                <div class="section-content">
+                <div class="about-grid">
 
-                    <p class="highlight-text">
-                        Sou psicólogo e acredito que cuidar da saúde mental também significa olhar para a vida que existe ao redor de cada pessoa.
-                    </p>
+                    <div class="about-intro">
 
-                    <p>
-                        Minha atuação é orientada pela Terapia Cognitivo-Comportamental
-                        (TCC) e por uma perspectiva biopsicossocial, considerando a relação
-                        entre pensamentos, emoções, comportamentos, corpo, história de vida,
-                        relações e contexto social.
-                    </p>
+                        <div class="number-mark">
+                            01
+                        </div>
 
-                    <p>
-                        Afinal, aquilo que sentimos e fazemos não acontece no vazio.
-                        Nossas experiências são atravessadas pelos vínculos que construímos,
-                        pelo ambiente em que vivemos, pelas oportunidades que tivemos e pelas
-                        formas como aprendemos a lidar com o mundo.
-                    </p>
+                        <p class="large-text">
+                            Sou psicólogo e acredito que cuidar
+                            da saúde mental também significa olhar
+                            para a vida que existe ao redor de cada
+                            pessoa.
+                        </p>
 
-                    <p>
-                        Ao longo da minha formação e experiência profissional, tive contato
-                        com diferentes públicos e contextos, incluindo adolescentes e adultos,
-                        mulheres migrantes e refugiadas, pessoas LGBTQIAPN+, pessoas em
-                        situação de vulnerabilidade social e pessoas atravessadas por questões
-                        relacionadas a gênero, sexualidade, relacionamentos, família, trabalho
-                        e pertencimento.
-                    </p>
+                    </div>
 
-                    <p>
-                        Essas experiências ampliaram meu olhar para as diferentes formas que
-                        uma mesma dificuldade pode assumir dependendo da história e do contexto
-                        de cada pessoa.
-                    </p>
+
+                    <div class="about-content">
+
+                        <p>
+                            Minha atuação é orientada pela
+                            Terapia Cognitivo-Comportamental (TCC)
+                            e por uma perspectiva biopsicossocial,
+                            considerando a relação entre pensamentos,
+                            emoções, comportamentos, corpo, história
+                            de vida, relações e contexto social.
+                        </p>
+
+                        <p>
+                            Afinal, aquilo que sentimos e fazemos
+                            não acontece no vazio. Nossas experiências
+                            são atravessadas pelos vínculos que
+                            construímos, pelo ambiente em que vivemos,
+                            pelas oportunidades que tivemos e pelas
+                            formas como aprendemos a lidar com o mundo.
+                        </p>
+
+                        <p>
+                            Ao longo da minha formação e experiência
+                            profissional, tive contato com diferentes
+                            públicos e contextos, incluindo adolescentes
+                            e adultos, mulheres migrantes e refugiadas,
+                            pessoas LGBTQIAPN+, pessoas em situação de
+                            vulnerabilidade social e pessoas atravessadas
+                            por questões relacionadas a gênero,
+                            sexualidade, relacionamentos, família,
+                            trabalho e pertencimento.
+                        </p>
+
+                    </div>
 
                 </div>
 
@@ -226,27 +272,27 @@
         </section>
 
 
-        <!-- =========================
-             COMO FUNCIONA
-        ========================== -->
-
+        <!-- TERAPIA -->
         <section class="section therapy-section" id="terapia">
 
             <div class="container">
 
-                <div class="center-heading">
+                <div class="section-heading centered">
 
                     <span class="section-label">
                         Como funciona
                     </span>
 
                     <h2>
-                        Terapia não é sobre ter todas as respostas.
+                        Terapia como um processo
+                        <span>construído em conjunto.</span>
                     </h2>
 
                     <p>
-                        É sobre compreender melhor o que está acontecendo e construir,
-                        em conjunto, novas possibilidades.
+                        Você não precisa chegar sabendo exatamente
+                        o que está acontecendo. Parte do nosso trabalho
+                        é justamente compreender o problema e descobrir,
+                        juntos, o que pode ser feito a partir daí.
                     </p>
 
                 </div>
@@ -254,51 +300,70 @@
 
                 <div class="therapy-grid">
 
-                    <article class="therapy-card">
+                    <article class="therapy-card card-blue">
 
-                        <span class="card-number">01</span>
+                        <div class="card-number">
+                            01
+                        </div>
+
+                        <div class="card-symbol">
+                            ◌
+                        </div>
 
                         <h3>
                             Compreender
                         </h3>
 
                         <p>
-                            Vamos observar o que está acontecendo, identificar padrões
-                            e compreender a relação entre pensamentos, emoções e comportamentos.
+                            Observar pensamentos, emoções,
+                            comportamentos e situações que
+                            participam daquilo que você está vivendo.
                         </p>
 
                     </article>
 
 
-                    <article class="therapy-card">
+                    <article class="therapy-card card-sand">
 
-                        <span class="card-number">02</span>
+                        <div class="card-number">
+                            02
+                        </div>
+
+                        <div class="card-symbol">
+                            ◇
+                        </div>
 
                         <h3>
                             Construir
                         </h3>
 
                         <p>
-                            O processo é colaborativo. As reflexões e estratégias são
-                            construídas considerando a sua realidade e aquilo que faz sentido
-                            para você.
+                            Desenvolver novas formas de compreender
+                            as situações e construir estratégias que
+                            façam sentido para a sua realidade.
                         </p>
 
                     </article>
 
 
-                    <article class="therapy-card">
+                    <article class="therapy-card card-green">
 
-                        <span class="card-number">03</span>
+                        <div class="card-number">
+                            03
+                        </div>
+
+                        <div class="card-symbol">
+                            ↗
+                        </div>
 
                         <h3>
                             Experimentar
                         </h3>
 
                         <p>
-                            Quando fizer sentido, podemos desenvolver novas habilidades
-                            e experimentar maneiras diferentes de responder às situações
-                            do cotidiano.
+                            Levar para a vida cotidiana aquilo que
+                            foi construído durante o processo,
+                            respeitando seu ritmo e contexto.
                         </p>
 
                     </article>
@@ -306,21 +371,15 @@
                 </div>
 
 
-                <div class="therapy-description">
+                <div class="therapy-note">
+
+                    <span class="note-symbol">+</span>
 
                     <p>
-                        Na TCC, trabalhamos de maneira colaborativa e ativa. Isso pode envolver
-                        observar a relação entre pensamentos, emoções e comportamentos,
-                        compreender situações que mantêm determinados padrões, desenvolver
-                        novas habilidades, experimentar formas diferentes de responder às
-                        situações e construir estratégias que façam sentido para a sua realidade.
-                    </p>
-
-                    <p>
-                        Gosto de trabalhar com clareza, diálogo e participação ativa.
-                        A terapia pode ter momentos de acolhimento e escuta, mas também envolve
-                        perguntas, reflexões, psicoeducação e, quando fizer sentido, propostas
-                        práticas para levar o que foi construído na sessão para a vida cotidiana.
+                        Na TCC, o processo é colaborativo e ativo.
+                        Pode envolver perguntas, reflexões,
+                        psicoeducação e propostas práticas quando
+                        fizer sentido.
                     </p>
 
                 </div>
@@ -330,69 +389,68 @@
         </section>
 
 
-        <!-- =========================
-             BIOPSICOSSOCIAL
-        ========================== -->
+        <!-- PERSPECTIVA -->
+        <section class="section perspective-section">
 
-        <section class="perspective-section">
+            <div class="container">
 
-            <div class="container perspective-grid">
+                <div class="perspective-layout">
 
-                <div class="perspective-content">
+                    <div class="perspective-intro">
 
-                    <span class="section-label">
-                        Perspectiva biopsicossocial
-                    </span>
+                        <span class="section-label">
+                            Um olhar para a pessoa inteira
+                        </span>
 
-                    <h2>
-                        O que acontece dentro de nós também tem relação com o mundo ao nosso redor.
-                    </h2>
+                        <h2>
+                            Saúde mental também
+                            envolve <span>contexto.</span>
+                        </h2>
 
-                    <p>
-                        Falar sobre saúde mental também é falar sobre relações, trabalho,
-                        família, cultura, condições de vida, identidade, acesso a direitos
-                        e outros aspectos que participam da experiência humana.
-                    </p>
+                        <p>
+                            Para mim, falar sobre saúde mental é
+                            também falar sobre relações, trabalho,
+                            família, cultura, condições de vida,
+                            identidade, acesso a direitos e outros
+                            aspectos que participam da experiência
+                            humana.
+                        </p>
 
-                    <p>
-                        Por isso, procuro manter uma escuta acolhedora, ética e contextualizada,
-                        sem reduzir a pessoa a um diagnóstico, a um comportamento ou a uma
-                        característica isolada.
-                    </p>
-
-                </div>
-
-
-                <div class="perspective-box">
-
-                    <div class="perspective-item">
-                        <span>01</span>
-                        <p>Pensamentos</p>
                     </div>
 
-                    <div class="perspective-item">
-                        <span>02</span>
-                        <p>Emoções</p>
-                    </div>
 
-                    <div class="perspective-item">
-                        <span>03</span>
-                        <p>Comportamentos</p>
-                    </div>
+                    <div class="perspective-list">
 
-                    <div class="perspective-item">
-                        <span>04</span>
-                        <p>Relações</p>
-                    </div>
+                        <div class="perspective-item">
+                            <span>01</span>
+                            <strong>Pensamentos</strong>
+                        </div>
 
-                    <div class="perspective-item">
-                        <span>05</span>
-                        <p>História de vida</p>
-                    </div>
+                        <div class="perspective-item">
+                            <span>02</span>
+                            <strong>Emoções</strong>
+                        </div>
 
-                    <div class="perspective-item">
-                        <span>06</span>
-                        <p>Contexto social</p>
+                        <div class="perspective-item">
+                            <span>03</span>
+                            <strong>Comportamentos</strong>
+                        </div>
+
+                        <div class="perspective-item">
+                            <span>04</span>
+                            <strong>Relações</strong>
+                        </div>
+
+                        <div class="perspective-item">
+                            <span>05</span>
+                            <strong>História de vida</strong>
+                        </div>
+
+                        <div class="perspective-item">
+                            <span>06</span>
+                            <strong>Contexto social</strong>
+                        </div>
+
                     </div>
 
                 </div>
@@ -402,31 +460,27 @@
         </section>
 
 
-        <!-- =========================
-             ATUAÇÃO
-        ========================== -->
-
+        <!-- ATUAÇÃO -->
         <section class="section areas-section" id="atuacao">
 
             <div class="container">
 
-                <div class="areas-heading">
+                <div class="section-heading">
 
-                    <div>
+                    <span class="section-label">
+                        Áreas de atuação
+                    </span>
 
-                        <span class="section-label">
-                            Áreas de atuação
-                        </span>
-
-                        <h2>
-                            Algumas questões que podemos trabalhar.
-                        </h2>
-
-                    </div>
+                    <h2>
+                        Algumas questões que
+                        podemos <span>explorar juntos.</span>
+                    </h2>
 
                     <p>
-                        Cada pessoa chega à terapia com uma história diferente.
-                        Estes são alguns dos temas que fazem parte da minha atuação.
+                        A terapia não precisa partir de um diagnóstico.
+                        O ponto de partida pode ser uma situação,
+                        dificuldade ou padrão que você gostaria de
+                        compreender melhor.
                     </p>
 
                 </div>
@@ -435,57 +489,57 @@
                 <div class="areas-grid">
 
                     <article class="area-card">
-                        <span>01</span>
+                        <span class="area-icon">♡</span>
                         <h3>Relacionamentos</h3>
-                        <p>Questões afetivas, amizades, vínculos e relações.</p>
+                        <p>Relações afetivas, amizades e vínculos.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>02</span>
+                        <span class="area-icon">◌</span>
                         <h3>Ansiedade</h3>
-                        <p>Compreensão de pensamentos, emoções e padrões relacionados à ansiedade.</p>
+                        <p>Preocupações, inseguranças e dificuldades emocionais.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>03</span>
+                        <span class="area-icon">✦</span>
                         <h3>Autoestima</h3>
-                        <p>Relação consigo mesmo, autocrítica e percepção de valor pessoal.</p>
+                        <p>Autocrítica, insegurança e relação consigo.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>04</span>
+                        <span class="area-icon">↔</span>
                         <h3>Comunicação e limites</h3>
-                        <p>Expressar necessidades, estabelecer limites e lidar com conflitos.</p>
+                        <p>Dificuldades para se posicionar e estabelecer limites.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>05</span>
+                        <span class="area-icon">◇</span>
                         <h3>Identidade e sexualidade</h3>
-                        <p>Questões relacionadas à identidade, sexualidade e pertencimento.</p>
+                        <p>Questões relacionadas à identidade e sexualidade.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>06</span>
+                        <span class="area-icon">○</span>
                         <h3>Gênero e masculinidades</h3>
-                        <p>Reflexões sobre gênero, masculinidades e formas de se relacionar.</p>
+                        <p>Reflexões sobre gênero, masculinidades e pertencimento.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>07</span>
+                        <span class="area-icon">↗</span>
                         <h3>Mudanças de vida</h3>
-                        <p>Períodos de transição, escolhas e adaptação a novas situações.</p>
+                        <p>Transições, adaptações e novos momentos.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>08</span>
+                        <span class="area-icon">?</span>
                         <h3>Tomada de decisões</h3>
-                        <p>Compreender possibilidades e desenvolver formas mais conscientes de escolher.</p>
+                        <p>Dúvidas, escolhas e diferentes possibilidades.</p>
                     </article>
 
                     <article class="area-card">
-                        <span>09</span>
+                        <span class="area-icon">∞</span>
                         <h3>Padrões de comportamento</h3>
-                        <p>Identificar padrões que se repetem e construir novas possibilidades de resposta.</p>
+                        <p>Comportamentos repetitivos e formas de lidar com situações.</p>
                     </article>
 
                 </div>
@@ -495,135 +549,151 @@
         </section>
 
 
-        <!-- =========================
-             COMO É A TERAPIA
-        ========================== -->
-
+        <!-- EXPERIÊNCIA -->
         <section class="section experience-section">
 
-            <div class="container experience-grid">
+            <div class="container">
 
-                <div class="experience-image">
+                <div class="experience-box">
 
-                    <div class="experience-decoration"></div>
-
-                    <div class="experience-photo-placeholder">
-                        Foto do Murilo
+                    <div class="experience-symbol">
+                        <span>+</span>
                     </div>
 
-                </div>
+                    <div class="experience-content">
 
+                        <span class="section-label">
+                            Minha experiência
+                        </span>
 
-                <div class="experience-content">
-
-                    <span class="section-label">
-                        Como é fazer terapia comigo
-                    </span>
-
-                    <h2>
-                        Um espaço de acolhimento, reflexão e construção.
-                    </h2>
-
-                    <p>
-                        A terapia é um espaço para olhar para o que está acontecendo
-                        com curiosidade e sem julgamentos, mas também com honestidade.
-                    </p>
-
-                    <p>
-                        Nem sempre aquilo que nos protege no curto prazo continua nos
-                        ajudando no longo prazo. Parte do processo pode ser reconhecer
-                        esses padrões e descobrir novas maneiras de lidar com eles.
-                    </p>
-
-                    <p>
-                        Meu objetivo não é oferecer respostas prontas sobre como você
-                        deveria viver. É ajudar você a compreender melhor a própria
-                        experiência, ampliar suas possibilidades de escolha e construir
-                        formas mais funcionais e coerentes de se relacionar consigo,
-                        com as outras pessoas e com o mundo.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================
-             CTA
-        ========================== -->
-
-        <section class="contact-section" id="contato">
-
-            <div class="container contact-container">
-
-                <div class="contact-content">
-
-                    <span class="section-label">
-                        Vamos conversar?
-                    </span>
-
-                    <h2>
-                        Talvez este seja um bom momento para começar.
-                    </h2>
-
-                    <p>
-                        Se você sente que está vivendo alguma situação que gostaria
-                        de compreender melhor, podemos conversar sobre o processo de psicoterapia.
-                    </p>
-
-                    <a 
-                        href="https://wa.me/5511911927565?text=Olá%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
-                        class="button button-light"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Falar pelo WhatsApp
-                    </a>
-
-                </div>
-
-                <div class="contact-details">
-
-                    <div class="contact-detail">
-
-                        <span>Atendimento</span>
-
-                        <strong>
-                            Online
-                        </strong>
+                        <h2>
+                            Diferentes histórias,
+                            diferentes contextos.
+                        </h2>
 
                         <p>
-                            Psicoterapia online para brasileiros.
+                            Essas experiências ampliaram meu olhar
+                            para as diferentes formas que uma mesma
+                            dificuldade pode assumir dependendo da
+                            história e do contexto de cada pessoa.
+                        </p>
+
+                        <p>
+                            Na prática clínica, tenho especial interesse
+                            por questões relacionadas a relacionamentos
+                            afetivos e de amizade, comunicação, limites,
+                            autoestima, autonomia, identidade,
+                            sexualidade, gênero e masculinidades,
+                            além de dificuldades envolvendo ansiedade,
+                            tomada de decisões, mudanças de vida e
+                            padrões de comportamento que acabam se
+                            repetindo.
                         </p>
 
                     </div>
 
+                </div>
 
-                    <div class="contact-detail">
+            </div>
 
-                        <span>WhatsApp</span>
+        </section>
 
-                        <strong>
-                            (11) 91192-7565
-                        </strong>
+
+        <!-- COMO É A TERAPIA -->
+        <section class="section process-section">
+
+            <div class="container">
+
+                <div class="process-grid">
+
+                    <div class="process-title">
+
+                        <span class="section-label">
+                            Como é comigo
+                        </span>
+
+                        <h2>
+                            Clareza, diálogo e
+                            <span>participação ativa.</span>
+                        </h2>
 
                     </div>
 
 
-                    <div class="contact-detail">
+                    <div class="process-content">
 
-                        <span>Instagram</span>
+                        <p>
+                            Gosto de trabalhar com clareza, diálogo
+                            e participação ativa. A terapia pode ter
+                            momentos de acolhimento e escuta, mas
+                            também envolve perguntas, reflexões,
+                            psicoeducação e, quando fizer sentido,
+                            propostas práticas para levar o que foi
+                            construído na sessão para a vida cotidiana.
+                        </p>
 
-                        <a 
-                            href="https://www.instagram.com/psicomurillo.c.oliveira/"
+                        <p>
+                            Meu objetivo não é oferecer respostas
+                            prontas sobre como você deveria viver.
+                            É ajudar você a compreender melhor a
+                            própria experiência, ampliar suas
+                            possibilidades de escolha e construir
+                            formas mais funcionais e coerentes de se
+                            relacionar consigo, com as outras pessoas
+                            e com o mundo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA FINAL -->
+        <section class="contact-section" id="contato">
+
+            <div class="container">
+
+                <div class="contact-box">
+
+                    <div class="contact-decoration contact-decoration-one"></div>
+                    <div class="contact-decoration contact-decoration-two"></div>
+
+                    <div class="contact-content">
+
+                        <span class="contact-label">
+                            Vamos conversar?
+                        </span>
+
+                        <h2>
+                            Talvez este seja um bom
+                            momento para começar.
+                        </h2>
+
+                        <p>
+                            Se você sente que está vivendo alguma
+                            situação que gostaria de compreender
+                            melhor, podemos conversar sobre como
+                            funciona o processo de psicoterapia.
+                        </p>
+
+                        <a
+                            href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
+                            class="button button-light"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            @psicomurillo.c.oliveira
+                            Falar com Murilo
+                            <span class="button-arrow">↗</span>
                         </a>
 
+                    </div>
+
+                    <div class="contact-mark">
+                        <span>+</span>
                     </div>
 
                 </div>
@@ -635,86 +705,94 @@
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- FOOTER -->
     <footer class="footer">
 
-        <div class="container footer-container">
+        <div class="container">
 
-            <div class="footer-brand">
+            <div class="footer-main">
 
-                <a href="#inicio" class="footer-logo">
-                    Murilo
-                </a>
+                <div class="footer-brand">
 
-                <p>
-                    Psicólogo • CRP 06/236859
-                </p>
+                    <span class="footer-logo">
+                        Murilo
+                    </span>
+
+                    <span class="footer-profession">
+                        Psicólogo
+                    </span>
+
+                    <p>
+                        Terapia Cognitivo-Comportamental (TCC)
+                    </p>
+
+                </div>
+
+
+                <div class="footer-info">
+
+                    <div class="footer-item">
+                        <span>CRP</span>
+                        <strong>06/236859</strong>
+                    </div>
+
+                    <div class="footer-item">
+                        <span>Atendimento</span>
+                        <strong>Online para brasileiros</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <a
+                        href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp
+                    </a>
+
+                    <a
+                        href="https://www.instagram.com/psicomurillo.c.oliveira/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+
+                </div>
 
             </div>
 
 
-            <div class="footer-info">
+            <div class="footer-bottom">
 
-                <p>
-                    Terapia Cognitivo-Comportamental (TCC)
-                </p>
+                <span>
+                    © 2026 Murilo Oliveira. Todos os direitos reservados.
+                </span>
 
-                <p>
-                    Psicoterapia online para brasileiros
-                </p>
-
-            </div>
-
-
-            <div class="footer-links">
-
-                <a 
-                    href="https://wa.me/5511911927565"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    WhatsApp
-                </a>
-
-                <a 
-                    href="https://www.instagram.com/psicomurillo.c.oliveira/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
+                <span>
+                    Psicoterapia online
+                </span>
 
             </div>
-
-        </div>
-
-
-        <div class="container footer-bottom">
-
-            <p>
-                © 2026 Murilo. Todos os direitos reservados.
-            </p>
 
         </div>
 
     </footer>
 
 
-    <!-- =========================
-         BOTÃO WHATSAPP
-    ========================== -->
-
+    <!-- WHATSAPP FLUTUANTE -->
     <a
-        href="https://wa.me/5511911927565"
+        href="https://wa.me/5511911927565?text=Ol%C3%A1%2C%20Murilo.%20Gostaria%20de%20saber%20mais%20sobre%20a%20psicoterapia."
         class="whatsapp-float"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar com Murilo pelo WhatsApp"
     >
-        <span>WhatsApp</span>
+        <span class="whatsapp-icon">◔</span>
     </a>
 
 
