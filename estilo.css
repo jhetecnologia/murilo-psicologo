@@ -1713,4 +1713,22 @@ a {
     }
 
 }
-```
+
+/* =========================================
+   AJUSTE EXCLUSIVO DA POLÍTICA DE PRIVACIDADE
+========================================= */
+
+body.privacy-page .header {
+    position: relative;
+}
+
+body.privacy-page .privacy-hero {
+    padding-top: 100px;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 760px) {
+    body.privacy-page .privacy-hero {
+        padding-top: 65px;
+    }
+}
